@@ -1,10 +1,3 @@
-from flask import Flask
+from app.api.health import bp as health_bp
 
-def create_app():
-    app = Flask(__name__)
-
-    @app.get("/health")
-    def health():
-        return {"status": "ok"}
-
-    return app
+__all__ = ["health_bp"]
